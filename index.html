@@ -1,0 +1,1063 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Krishna Prajapati - Office Executive, Accounting and Administration Professional">
+  <title>Krishna Prajapati | Professional Portfolio</title>
+
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    :root {
+      --bg: #080d19;
+      --panel: #10192b;
+      --panel-light: #152139;
+      --blue: #55d6ff;
+      --purple: #9d8cff;
+      --white: #f4f7ff;
+      --muted: #a1acc2;
+      --border: rgba(255,255,255,0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .accent {
+      color: var(--blue);
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading .label {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.25;
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 620px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 13, 25, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13px;
+      transition: color .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      right: -100px;
+      top: 50px;
+      background: radial-gradient(circle, rgba(85,214,255,.18), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      left: -150px;
+      bottom: -150px;
+      background: radial-gradient(circle, rgba(157,140,255,.14), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr .8fr;
+      gap: 65px;
+      align-items: center;
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 7px 14px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #62e6a7;
+      box-shadow: 0 0 12px rgba(98,230,167,.7);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 .gradient {
+      background: linear-gradient(100deg, var(--blue), var(--purple));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero h2 {
+      font-size: 19px;
+      font-weight: 500;
+      color: #d3dbee;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 21px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform .25s, background .25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #08111d;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--white);
+      background: rgba(255,255,255,.03);
+    }
+
+    .profile-card {
+      position: relative;
+      padding: 35px 27px;
+      text-align: center;
+      border: 1px solid rgba(85,214,255,.24);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(21,33,57,.95), rgba(12,19,33,.95));
+      box-shadow: 0 25px 70px rgba(0,0,0,.22);
+    }
+
+    .profile-initials {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 43px;
+      font-weight: 900;
+      color: var(--blue);
+      background: linear-gradient(145deg, #1c3550, #171d39);
+      border: 1px solid rgba(85,214,255,.45);
+      box-shadow: 0 0 40px rgba(85,214,255,.10);
+    }
+
+    .profile-card h3 {
+      font-size: 22px;
+    }
+
+    .profile-card > p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .profile-line {
+      height: 1px;
+      background: var(--border);
+      margin: 25px 0;
+    }
+
+    .profile-detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 13px 0;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .profile-detail span:first-child {
+      color: var(--muted);
+    }
+
+    .profile-detail span:last-child {
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      transition: border-color .3s, transform .3s;
+    }
+
+    .card:hover {
+      border-color: rgba(85,214,255,.38);
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .focus-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      padding: 6px 11px;
+      font-size: 11px;
+      border: 1px solid var(--border);
+      background: var(--panel-light);
+      border-radius: 6px;
+      color: #d8e3f8;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .experience-list {
+      position: relative;
+      margin-left: 9px;
+      padding-left: 32px;
+      border-left: 1px solid rgba(85,214,255,.35);
+    }
+
+    .experience-card {
+      position: relative;
+      margin-bottom: 25px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+    }
+
+    .experience-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      left: -39px;
+      top: 31px;
+      background: var(--blue);
+      box-shadow: 0 0 14px rgba(85,214,255,.5);
+    }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .job-top h3 {
+      font-size: 18px;
+    }
+
+    .company {
+      color: var(--blue);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .job-date {
+      white-space: nowrap;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: var(--panel-light);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .experience-card ul {
+      padding-left: 19px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .experience-card li {
+      margin-bottom: 6px;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--panel), #0d1423);
+    }
+
+    .skill-card h3 {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-chips span {
+      background: rgba(85,214,255,.07);
+      border: 1px solid rgba(85,214,255,.14);
+      border-radius: 6px;
+      padding: 6px 9px;
+      color: #c7eafa;
+      font-size: 11px;
+    }
+
+    /* ===== EDUCATION ===== */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .education-card {
+      border-top: 3px solid var(--blue);
+    }
+
+    .education-card .year {
+      font-size: 12px;
+      color: var(--blue);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .education-card h3 {
+      font-size: 16px;
+    }
+
+    .education-card p {
+      margin-top: 6px;
+      font-size: 13px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: center;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(85,214,255,.22);
+      background:
+        radial-gradient(circle at top right, rgba(85,214,255,.09), transparent 40%),
+        var(--panel);
+    }
+
+    .contact-box h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-link {
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255,255,255,.025);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+      transition: border-color .25s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--blue);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ===== MOBILE RESPONSIVENESS ===== */
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .profile-card {
+        max-width: 460px;
+        width: 100%;
+      }
+
+      .skills-grid,
+      .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: 90%;
+      }
+
+      .nav-inner {
+        padding: 13px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .hero-grid {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .about-grid,
+      .skills-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-top {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .job-date {
+        white-space: normal;
+      }
+
+      .experience-list {
+        padding-left: 22px;
+      }
+
+      .experience-card::before {
+        left: -29px;
+      }
+
+      .experience-card,
+      .card,
+      .skill-card {
+        padding: 21px;
+      }
+
+      .contact-box {
+        padding: 24px;
+      }
+    }
+
+    @media print {
+      :root {
+        --bg: #ffffff;
+        --panel: #f5f7fa;
+        --panel-light: #e9edf3;
+        --white: #172033;
+        --muted: #4f596b;
+        --border: #d5dbe4;
+        --blue: #087da7;
+        --purple: #6251b5;
+      }
+
+      body {
+        background: white;
+        color: #172033;
+      }
+
+      .navbar {
+        position: static;
+        background: white;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 35px 0;
+      }
+
+      .section {
+        padding: 35px 0;
+      }
+
+      .profile-card,
+      .card,
+      .experience-card,
+      .skill-card,
+      .education-card,
+      .contact-box {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .buttons,
+      .navbar,
+      .print-control {
+        display: none !important;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">KP<span>.</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="availability">
+          <span class="status-dot"></span>
+          Professional Portfolio
+        </div>
+
+        <h1>
+          Krishna<br>
+          <span class="gradient">Prajapati.</span>
+        </h1>
+
+        <h2>Office Executive <span class="accent">|</span> Administration &amp; Accounts</h2>
+
+        <p class="hero-description">
+          An organized and detail-oriented professional with experience in
+          office administration, accounting, report preparation, documentation
+          and data management. Focused on accuracy, efficiency and reliable work.
+        </p>
+
+        <div class="buttons">
+          <a href="#experience" class="btn btn-primary">Explore My Experience ↗</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <button class="btn btn-secondary print-control"
+                  onclick="window.print()" type="button">
+            Save as PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-initials">KP</div>
+
+        <h3>Krishna Prajapati</h3>
+        <p>Office Executive</p>
+
+        <div class="profile-line"></div>
+
+        <div class="profile-detail">
+          <span>Location</span>
+          <span>Lucknow, India</span>
+        </div>
+
+        <div class="profile-detail">
+          <span>Experience</span>
+          <span>Office &amp; Accounts</span>
+        </div>
+
+        <div class="profile-detail">
+          <span>Specialization</span>
+          <span>RDSS &amp; Documentation</span>
+        </div>
+
+        <div class="profile-detail">
+          <span>Email</span>
+          <span>krishnal25588@gmail.com</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="label">01 / About Me</span>
+        <h2>Professional Summary<span class="accent">.</span></h2>
+        <p>
+          A quick overview of my professional background, working approach
+          and key areas of experience.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card">
+          <div class="card-icon">▣</div>
+          <h3>Office Administration</h3>
+          <p>
+            Experienced in routine office work, maintaining organized records,
+            preparing reports, managing documentation and supporting project
+            activities.
+          </p>
+
+          <div class="focus-list">
+            <span class="tag">Documentation</span>
+            <span class="tag">Data Management</span>
+            <span class="tag">Report Preparation</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">◈</div>
+          <h3>Accounting &amp; Accuracy</h3>
+          <p>
+            Background in accounting operations, financial record maintenance,
+            transaction handling and the use of office productivity software.
+          </p>
+
+          <div class="focus-list">
+            <span class="tag">Tally Prime</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">GST Basics</span>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="section" id="experience">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="label">02 / Career Journey</span>
+        <h2>Work Experience<span class="accent">.</span></h2>
+        <p>
+          My professional experience across office administration,
+          content editing and accounting.
+        </p>
+      </div>
+
+      <div class="experience-list">
+
+        <article class="experience-card">
+          <div class="job-top">
+            <div>
+              <h3>Office Executive</h3>
+              <p class="company">Comopower Engineers Pvt. Ltd.</p>
+            </div>
+            <span class="job-date">Apr 2024 – Present</span>
+          </div>
+
+          <ul>
+            <li>Worked on the Revamped Distribution Sector Scheme (RDSS) project.</li>
+            <li>Supported report preparation, data management and office documentation.</li>
+            <li>Assisted with project records and routine administrative work.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <div class="job-top">
+            <div>
+              <h3>Content Editor</h3>
+              <p class="company">JVS Infodege</p>
+            </div>
+            <span class="job-date">Oct 2022 – Feb 2024</span>
+          </div>
+
+          <ul>
+            <li>Created and reviewed mock-test question papers for academies.</li>
+            <li>Checked content accuracy, consistency and overall quality.</li>
+            <li>Helped maintain organized and reliable educational content.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <div class="job-top">
+            <div>
+              <h3>Accounting Executive</h3>
+              <p class="company">Ravi Plywoods</p>
+            </div>
+            <span class="job-date">Mar 2022 – Sep 2022</span>
+          </div>
+
+          <ul>
+            <li>Managed daily accounting activities and maintained financial records.</li>
+            <li>Handled transaction entries and routine accounting documentation.</li>
+            <li>Focused on accuracy in records and data management.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="section" id="skills">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="label">03 / What I Do</span>
+        <h2>Skills &amp; Expertise<span class="accent">.</span></h2>
+        <p>
+          Tools and professional skills used in daily administrative,
+          accounting and documentation work.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <article class="skill-card">
+          <h3>▣ Microsoft Office</h3>
+          <div class="skill-chips">
+            <span>MS Word</span>
+            <span>MS Excel</span>
+            <span>PowerPoint</span>
+            <span>Documentation</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>◈ Accounting</h3>
+          <div class="skill-chips">
+            <span>Tally Prime</span>
+            <span>GST</span>
+            <span>Sales &amp; Purchase</span>
+            <span>Bank Entries</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>▤ Administration</h3>
+          <div class="skill-chips">
+            <span>Data Management</span>
+            <span>Office Work</span>
+            <span>Record Keeping</span>
+            <span>Reporting</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>✎ Content Editing</h3>
+          <div class="skill-chips">
+            <span>Proofreading</span>
+            <span>Content Review</span>
+            <span>Quality Checking</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>⌨ Communication</h3>
+          <div class="skill-chips">
+            <span>Hindi Typing</span>
+            <span>English Typing</span>
+            <span>Written Communication</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>✦ Professional Skills</h3>
+          <div class="skill-chips">
+            <span>Time Management</span>
+            <span>Problem-Solving</span>
+            <span>Organization</span>
+            <span>Attention to Detail</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section class="section" id="education">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="label">04 / Academic Background</span>
+        <h2>Education<span class="accent">.</span></h2>
+        <p>My academic qualifications and educational background.</p>
+      </div>
+
+      <div class="education-grid">
+
+        <article class="card education-card">
+          <p class="year">2018 – 2021</p>
+          <h3>Bachelor of Commerce</h3>
+          <p>Lucknow Christian Degree College</p>
+        </article>
+
+        <article class="card education-card">
+          <p class="year">2017 – 2018</p>
+          <h3>Intermediate</h3>
+          <p>SDA School, Lucknow</p>
+        </article>
+
+        <article class="card education-card">
+          <p class="year">2016 – 2017</p>
+          <h3>High School</h3>
+          <p>SDA School, Lucknow</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="label">05 / Get In Touch</span>
+        <h2>Let's Connect<span class="accent">.</span></h2>
+        <p>
+          Feel free to contact me for professional enquiries
+          or opportunities.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <div>
+          <h3>Have an opportunity in mind?</h3>
+          <p>
+            Reach out by phone or email. I look forward to connecting
+            and discussing professional opportunities.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-link"
+             href="mailto:krishnal25588@gmail.com">
+            ✉ &nbsp; krishnal25588@gmail.com
+          </a>
+
+          <a class="contact-link" href="tel:8081102471">
+            ☎ &nbsp; 8081102471
+          </a>
+
+          <a class="contact-link" href="tel:9129065755">
+            ☎ &nbsp; 9129065755
+          </a>
+
+          <div class="contact-link">
+            ⌖ &nbsp; Lucknow, Uttar Pradesh, India
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Krishna Prajapati</span>
+      <span>Designed with HTML &amp; CSS <span class="accent">♥</span></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
